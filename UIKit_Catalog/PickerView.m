@@ -146,7 +146,7 @@
         NSInteger val1 = [pickerView selectedRowInComponent:1];
         NSInteger val2 = [pickerView selectedRowInComponent:2];
         
-        self.selectTextLabel.text = [NSString stringWithFormat:@"1列目:%ld行目\n\n2列目:%ld行目\n\n3列目:%ld行目",val0,val1,(long)val2];
+        self.selectTextLabel.text = [NSString stringWithFormat:@"1列目:%ld行目\n\n2列目:%ld行目\n\n3列目:%ld行目",(long)val0,(long)val1,(long)val2];
     }
 }
 

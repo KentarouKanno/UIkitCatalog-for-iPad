@@ -19,6 +19,6 @@
 - (IBAction)reload:(id)sender;
 - (IBAction)forward:(id)sender;
 
-+ (id)LoadFromNib;
++ (instancetype)LoadFromNib;
 
 @end

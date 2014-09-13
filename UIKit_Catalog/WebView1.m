@@ -10,15 +10,14 @@
 
 @implementation WebView1
 
-+ (id)LoadFromNib
++ (instancetype)LoadFromNib
 {
-    UIView *view = [[UINib nibWithNibName:@"WebView1" bundle:nil]instantiateWithOwner:nil options:nil][0];
+    WebView1 *view = [[UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil]instantiateWithOwner:nil options:nil][0];
     return view;
 }
 
 -(void)awakeFromNib
 {
-    
     // PDF画面
     NSURL* url = [[NSBundle mainBundle] URLForResource:@"sample"withExtension:@"pdf"];
     NSURLRequest* req = [NSURLRequest requestWithURL:url];
@@ -51,25 +50,40 @@
     }
 }
 
--(void)webViewDidStartLoad:(UIWebView*)webView{
+// webViewDidStartLoadより先に呼ばれる NOを返すとリンク先に飛ばない
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+
+    // リンク先によって処理を分けるならここで書く
+    
+    return YES;
+}
+
+-(void)webViewDidStartLoad:(UIWebView*)webView
+{
+    // Statue Bar のインジケーター表示
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
 
--(void)webViewDidFinishLoad:(UIWebView*)webView{
+-(void)webViewDidFinishLoad:(UIWebView*)webView
+{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     
-    if (self.webV.canGoBack) {
-        self.backBtn.enabled = YES;
-    } else {
-        self.backBtn.enabled = NO;
-    }
     
-    if (self.webV.canGoForward) {
-        self.forwardBtn.enabled = YES;
-    } else {
-        self.forwardBtn.enabled = NO;
+    _webV.canGoBack?    [_backBtn setEnabled:YES]    : [_backBtn setEnabled:NO];
+    _webV.canGoForward? [_forwardBtn setEnabled:YES] : [_forwardBtn setEnabled:NO];
+    
+    
+    // WebViewが初期表示時に拡大表示される対応
+    CGSize contentSize = _webV.scrollView.contentSize;
+    CGSize viewSize = _webV.frame.size;
+    
+    float scale = viewSize.width / contentSize.width;
+    if (scale < 0.9) {
+        NSLog(@"Zoom out fix for web view: %f", scale);
+        _webV.scrollView.zoomScale = scale;
     }
-
 }
+
 
 @end
