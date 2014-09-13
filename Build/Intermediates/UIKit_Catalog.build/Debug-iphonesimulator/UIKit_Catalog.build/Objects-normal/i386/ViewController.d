@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/ViewController.m \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/ViewController.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/SliderView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/StepperView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/StringSizeView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/ButtonSizeView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/TextFieldView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/IndicatorView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/SwitchView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/PageControlView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/ScrollView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/TextView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/WebView1.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/DatePickerView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/SegmentedControlView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/PickerView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/MapView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/ProgressView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/AlertView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/ActionSheet.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIKit_Catalog/UIKit_Catalog/GestureView.h
