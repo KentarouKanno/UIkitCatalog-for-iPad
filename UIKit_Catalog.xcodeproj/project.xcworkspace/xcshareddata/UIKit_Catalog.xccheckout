@@ -12,12 +12,16 @@
 	<dict>
 		<key>9CC00055782E1F19006ABA41BB2006170175B522</key>
 		<string>https://github.com/KentarOuKannO/UIkitCatalog-for-iPad.git</string>
+		<key>A52554B78CD8DBCEF0B0E9DCED38588E8DC54537</key>
+		<string>https://github.com/KentarOuKannO/UIkitCatalog-for-iPad.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>UIKit_Catalog/UIKit_Catalog.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9CC00055782E1F19006ABA41BB2006170175B522</key>
+		<string>../../../../..</string>
+		<key>A52554B78CD8DBCEF0B0E9DCED38588E8DC54537</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,7 +29,7 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9CC00055782E1F19006ABA41BB2006170175B522</string>
+	<string>A52554B78CD8DBCEF0B0E9DCED38588E8DC54537</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -33,6 +37,14 @@
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>9CC00055782E1F19006ABA41BB2006170175B522</string>
+			<key>IDESourceControlWCCName</key>
+			<string>..</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A52554B78CD8DBCEF0B0E9DCED38588E8DC54537</string>
 			<key>IDESourceControlWCCName</key>
 			<string>UIkitCatalog-for-iPad</string>
 		</dict>

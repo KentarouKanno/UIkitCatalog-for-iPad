@@ -69,6 +69,7 @@
     } else {
         self.forwardBtn.enabled = NO;
     }
+
 }
 
 @end

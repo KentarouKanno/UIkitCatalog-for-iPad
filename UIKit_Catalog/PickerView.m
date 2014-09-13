@@ -103,15 +103,15 @@
     } else {
         switch (component) {
             case 0:
-                return [NSString stringWithFormat:@"%d", row];
+                return [NSString stringWithFormat:@"%ld", (long)row];
                 break;
                 
             case 1:
-                return [NSString stringWithFormat:@"%d行目", row];
+                return [NSString stringWithFormat:@"%ld行目", (long)row];
                 break;
                 
             case 2:
-                return [NSString stringWithFormat:@"%d列-%d行", component, row];
+                return [NSString stringWithFormat:@"%ld列-%ld行", (long)component, (long)row];
                 break;
                 
             default:
@@ -146,7 +146,7 @@
         NSInteger val1 = [pickerView selectedRowInComponent:1];
         NSInteger val2 = [pickerView selectedRowInComponent:2];
         
-        self.selectTextLabel.text = [NSString stringWithFormat:@"1列目:%d行目\n\n2列目:%d行目\n\n3列目:%d行目",val0,val1,val2];
+        self.selectTextLabel.text = [NSString stringWithFormat:@"1列目:%ld行目\n\n2列目:%ld行目\n\n3列目:%ld行目",val0,val1,(long)val2];
     }
 }
 
