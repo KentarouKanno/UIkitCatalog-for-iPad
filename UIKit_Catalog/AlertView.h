@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *alertLabel;
 
-+ (id)LoadFromNib;
++ (instancetype)LoadFromNib;
 
 - (IBAction)alertBtn1:(id)sender;
 - (IBAction)alertBtn2:(id)sender;

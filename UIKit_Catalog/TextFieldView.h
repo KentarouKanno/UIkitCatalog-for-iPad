@@ -15,6 +15,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *textField3;
 @property (strong, nonatomic) IBOutlet UITextField *textField4;
 
-+ (id)LoadFromNib;
++ (instancetype)LoadFromNib;
 
 @end

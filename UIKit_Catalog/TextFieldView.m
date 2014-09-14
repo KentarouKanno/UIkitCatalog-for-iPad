@@ -13,15 +13,15 @@
     NSMutableArray *fontArray;
 }
 
-+ (id)LoadFromNib
++ (instancetype)LoadFromNib
 {
-    UIView *view = [[UINib nibWithNibName:@"TextFieldView" bundle:nil]instantiateWithOwner:nil options:nil][0];
+    TextFieldView *view = [[UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil]instantiateWithOwner:nil options:nil][0];
     return view;
 }
 
 -(void)awakeFromNib
 {
-    
+    // 初期化処理
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -29,5 +29,6 @@
     [textField resignFirstResponder];
     return YES;
 }
+
 
 @end

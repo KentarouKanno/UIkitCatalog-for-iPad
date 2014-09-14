@@ -124,7 +124,6 @@
             // IndicatorView [5]
             indicator = [IndicatorView LoadFromNib];
             selectView = indicator;
-
             break;
         case 6:
             // SwitchView [6]
@@ -203,7 +202,7 @@
                      animations:^{
                          
                          selectView.alpha = 1.0f;
-                         self.grayHideView.alpha = 0.85f;
+                         self.grayHideView.alpha = 0.8f;
                          
                      }
                      completion:^(BOOL finished){
