@@ -14,9 +14,9 @@
     float value;
 }
 
-+ (id)LoadFromNib
++ (instancetype)LoadFromNib
 {
-    UIView *view = [[UINib nibWithNibName:@"ProgressView" bundle:nil]instantiateWithOwner:nil options:nil][0];
+    ProgressView *view = [[UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil]instantiateWithOwner:nil options:nil][0];
     return view;
 }
 
@@ -42,6 +42,7 @@
         value = 0;
         self.progress1.progress = value;
         self.progress2.progress = value;
+        _progress3.progress = value;
         
         self.hideView.hidden = YES;
         self.DLindicator.hidden = YES;
@@ -51,6 +52,7 @@
     
     self.progress1.progress = value;
     self.progress2.progress = value;
+    _progress3.progress = value;
     
     value += 0.08;
 }

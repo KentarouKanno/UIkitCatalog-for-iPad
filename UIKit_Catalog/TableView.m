@@ -11,6 +11,9 @@
 @interface TableView()
 {
     NSArray *sectionList;
+    
+    UIRefreshControl *refreshControl;
+    UIRefreshControl *refreshControl2;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *defaultTable;
@@ -80,6 +83,46 @@
     
     // セクション名を設定する
     sectionList =  [NSArray arrayWithObjects:@"Section1",@"Section2",@"Section3",@"Section4",@"Section5", nil];
+    
+    UIRefreshControl *refreshC = [[UIRefreshControl alloc]init];
+    
+    // 更新アクションを設定
+    [refreshC addTarget:self action:@selector(onRefresh:) forControlEvents:UIControlEventValueChanged];
+    
+    
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    /* 24時間表記 */
+    dateFormatter.dateFormat = @"yyyy/MM/dd HH:mm:ss";
+    NSString *date24 = [dateFormatter stringFromDate:date];
+    
+    // UITableViewにUIRefreshControlを設定
+    refreshControl = refreshC;
+    refreshControl.attributedTitle =[[NSAttributedString alloc]initWithString:[NSString stringWithFormat:@"更新:%@",date24]];
+    [_value2Table addSubview:refreshControl];
+    
+    UIRefreshControl *refreshC2 = [[UIRefreshControl alloc]init];
+    
+    // 更新アクションを設定
+    [refreshC2 addTarget:self action:@selector(onRefresh:) forControlEvents:UIControlEventValueChanged];
+    [refreshC2 setTintColor:[UIColor redColor]];
+    // UITableViewにUIRefreshControlを設定
+    refreshControl2 = refreshC2;
+    [_value1Table addSubview:refreshControl2];
+}
+
+- (void)onRefresh:(id)sender
+{
+    // 更新開始
+    [refreshControl beginRefreshing];
+    [refreshControl2 beginRefreshing];
+    
+    // 更新処理をここに記述
+    
+    // 更新終了
+    [refreshControl endRefreshing];
+    [refreshControl2 endRefreshing];
 }
 
 // セクション名を返す
@@ -99,6 +142,7 @@
 {
     return 5;
 }
+
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -128,6 +172,8 @@
         // UITableViewCellStyleValue2
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+        
+        cell.backgroundColor = [UIColor colorWithRed:0.828 green:1.000 blue:0.981 alpha:1.000];
         
     } else if(tableView.tag == 3){
         

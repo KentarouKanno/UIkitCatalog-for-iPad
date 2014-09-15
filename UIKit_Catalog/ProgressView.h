@@ -14,8 +14,9 @@
 @property (strong, nonatomic) IBOutlet UIProgressView *progress2;
 @property (strong, nonatomic) IBOutlet UIView *hideView;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *DLindicator;
+@property (weak, nonatomic) IBOutlet UIProgressView *progress3;
 
-+ (id)LoadFromNib;
++ (instancetype)LoadFromNib;
 
 - (IBAction)downLoadBtn:(id)sender;
 

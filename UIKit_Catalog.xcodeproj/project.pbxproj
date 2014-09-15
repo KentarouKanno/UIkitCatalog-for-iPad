@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		36899A0D19C66A9500CA9F02 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36899A0B19C66A9500CA9F02 /* TableView.m */; };
 		36899A0E19C66A9500CA9F02 /* TableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36899A0C19C66A9500CA9F02 /* TableView.xib */; };
+		36FC88A919C6B7AE004D75D1 /* apple.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 36FC88A819C6B7AE004D75D1 /* apple.jpeg */; };
 		378C690D185307D400886452 /* ButtonSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C690B185307D400886452 /* ButtonSizeView.m */; };
 		378C690E185307D400886452 /* ButtonSizeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378C690C185307D400886452 /* ButtonSizeView.xib */; };
 		378C69101853135E00886452 /* button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 378C690F1853135E00886452 /* button.jpg */; };
@@ -92,6 +93,7 @@
 		36899A0A19C66A9500CA9F02 /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableView.h; sourceTree = "<group>"; };
 		36899A0B19C66A9500CA9F02 /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = "<group>"; };
 		36899A0C19C66A9500CA9F02 /* TableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableView.xib; sourceTree = "<group>"; };
+		36FC88A819C6B7AE004D75D1 /* apple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apple.jpeg; sourceTree = "<group>"; };
 		378C690A185307D400886452 /* ButtonSizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonSizeView.h; sourceTree = "<group>"; };
 		378C690B185307D400886452 /* ButtonSizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonSizeView.m; sourceTree = "<group>"; };
 		378C690C185307D400886452 /* ButtonSizeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonSizeView.xib; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 		37ADC85C1852C710003B8937 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				36FC88A819C6B7AE004D75D1 /* apple.jpeg */,
 				378C697E18588C9C00886452 /* sample.pdf */,
 				378C693D18541A9600886452 /* mac.jpg */,
 				378C693118533E9B00886452 /* image0.jpg */,
@@ -615,6 +618,7 @@
 				378C693218533E9B00886452 /* image1.jpg in Resources */,
 				378C69791855FA8200886452 /* ActionSheet.xib in Resources */,
 				37ADC8671852CAFB003B8937 /* zoom.png in Resources */,
+				36FC88A919C6B7AE004D75D1 /* apple.jpeg in Resources */,
 				378C691A1853212800886452 /* tel-iphone.png in Resources */,
 				378C693318533E9B00886452 /* image2.jpg in Resources */,
 				37ADC8271852AE7A003B8937 /* InfoPlist.strings in Resources */,

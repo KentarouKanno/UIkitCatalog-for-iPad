@@ -8,11 +8,17 @@
 
 #import "StepperView.h"
 
+@interface StepperView()
+
+@property (weak, nonatomic) IBOutlet UIStepper *backImageStepper;
+
+@end
+
 @implementation StepperView
 
-+ (id)LoadFromNib
++ (instancetype)LoadFromNib
 {
-    UIView *view = [[UINib nibWithNibName:@"StepperView" bundle:nil]instantiateWithOwner:nil options:nil][0];
+    StepperView *view = [[UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil]instantiateWithOwner:nil options:nil][0];
     return view;
 }
 
