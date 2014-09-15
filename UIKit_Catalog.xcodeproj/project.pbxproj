@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36899A0D19C66A9500CA9F02 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36899A0B19C66A9500CA9F02 /* TableView.m */; };
+		36899A0E19C66A9500CA9F02 /* TableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36899A0C19C66A9500CA9F02 /* TableView.xib */; };
 		378C690D185307D400886452 /* ButtonSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C690B185307D400886452 /* ButtonSizeView.m */; };
 		378C690E185307D400886452 /* ButtonSizeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378C690C185307D400886452 /* ButtonSizeView.xib */; };
 		378C69101853135E00886452 /* button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 378C690F1853135E00886452 /* button.jpg */; };
@@ -87,6 +89,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36899A0A19C66A9500CA9F02 /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableView.h; sourceTree = "<group>"; };
+		36899A0B19C66A9500CA9F02 /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = "<group>"; };
+		36899A0C19C66A9500CA9F02 /* TableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableView.xib; sourceTree = "<group>"; };
 		378C690A185307D400886452 /* ButtonSizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonSizeView.h; sourceTree = "<group>"; };
 		378C690B185307D400886452 /* ButtonSizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonSizeView.m; sourceTree = "<group>"; };
 		378C690C185307D400886452 /* ButtonSizeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonSizeView.xib; sourceTree = "<group>"; };
@@ -337,6 +342,9 @@
 		378C695118544C6E00886452 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				36899A0A19C66A9500CA9F02 /* TableView.h */,
+				36899A0B19C66A9500CA9F02 /* TableView.m */,
+				36899A0C19C66A9500CA9F02 /* TableView.xib */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -630,6 +638,7 @@
 				378C6926185331A200886452 /* SwitchView.xib in Resources */,
 				378C693618533E9B00886452 /* image0.jpg in Resources */,
 				378C695818544D4400886452 /* DatePickerView.xib in Resources */,
+				36899A0E19C66A9500CA9F02 /* TableView.xib in Resources */,
 				37ADC8731852EFAE003B8937 /* StringSizeView.xib in Resources */,
 				378C693518533E9B00886452 /* image4.jpg in Resources */,
 				378C697F18588C9C00886452 /* sample.pdf in Resources */,
@@ -656,6 +665,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				378C6925185331A200886452 /* SwitchView.m in Sources */,
+				36899A0D19C66A9500CA9F02 /* TableView.m in Sources */,
 				378C69611854605C00886452 /* PickerView.m in Sources */,
 				37ADC8531852AED7003B8937 /* ViewController.m in Sources */,
 				37ADC86C1852CD06003B8937 /* StepperView.m in Sources */,

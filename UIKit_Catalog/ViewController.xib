@@ -75,7 +75,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d0L-Es-Mr1">
-                            <rect key="frame" x="245" y="490" width="278" height="97"/>
+                            <rect key="frame" x="315" y="519" width="278" height="97"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="63"/>
                             <state key="normal" title="TextField">
@@ -171,10 +171,11 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LFu-VP-nQF">
-                            <rect key="frame" x="2" y="440" width="315" height="71"/>
+                            <rect key="frame" x="90" y="432" width="315" height="71"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="58"/>
                             <state key="normal" title="PickerView">
+                                <color key="titleColor" red="1" green="0.34376223363588509" blue="0.3538019506136022" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -263,6 +264,18 @@
                             </state>
                             <connections>
                                 <action selector="mailButton:" destination="-1" eventType="touchUpInside" id="7XD-Dn-ZmZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F1D-k9-vHB">
+                            <rect key="frame" x="36" y="511" width="263" height="58"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                            <state key="normal" title="TableView">
+                                <color key="titleColor" red="0.68763933001342015" green="0.93459007153829055" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="viewOpen:" destination="-1" eventType="touchUpInside" id="tDX-Df-LMq"/>
                             </connections>
                         </button>
                     </subviews>

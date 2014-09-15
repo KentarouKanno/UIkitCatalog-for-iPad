@@ -26,6 +26,7 @@
 #import "AlertView.h"
 #import "ActionSheet.h"
 #import "GestureView.h"
+#import "TableView.h"
 
 #import <MessageUI/MFMailComposeViewController.h>
 
@@ -56,6 +57,7 @@
     AlertView *alert;
     ActionSheet *action;
     GestureView *gesture;
+    TableView *table;
 }
 
 @end
@@ -192,6 +194,11 @@
             gesture = [GestureView LoadFromNib];
             selectView = gesture;
             break;
+        case 19:
+            // TableView [19]
+            table = [TableView LoadFromNib];
+            selectView = table;
+            break;
 
         default:
             break;
@@ -248,7 +255,7 @@
     }
 }
 
-
+#pragma mark- mail Button Action
 
 - (IBAction)mailButton:(id)sender
 {

@@ -19,4 +19,5 @@ dependencies: \
   /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIkitCatalog-for-iPad/UIkitCatalog-for-iPad/UIKit_Catalog/ProgressView.h \
   /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIkitCatalog-for-iPad/UIkitCatalog-for-iPad/UIKit_Catalog/AlertView.h \
   /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIkitCatalog-for-iPad/UIkitCatalog-for-iPad/UIKit_Catalog/ActionSheet.h \
-  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIkitCatalog-for-iPad/UIkitCatalog-for-iPad/UIKit_Catalog/GestureView.h
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIkitCatalog-for-iPad/UIkitCatalog-for-iPad/UIKit_Catalog/GestureView.h \
+  /Users/KentarOu/Desktop/My_Github/UIkitCatalog-for-iPad/UIkitCatalog-for-iPad/UIkitCatalog-for-iPad/UIKit_Catalog/TableView.h
