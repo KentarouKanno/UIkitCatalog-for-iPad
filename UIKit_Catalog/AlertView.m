@@ -226,7 +226,7 @@
         
         [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
          {
-             textField.placeholder = @"ID入力してください";
+             textField.placeholder = @"IDを入力してください";
              alert5LoginTextField = textField;
          }];
         

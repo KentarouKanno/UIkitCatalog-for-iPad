@@ -14,6 +14,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *selectLabel2;
 @property (strong, nonatomic) IBOutlet UILabel *selectLabel3;
 
-+ (id)LoadFromNib;
++ (instancetype)LoadFromNib;
 
 @end

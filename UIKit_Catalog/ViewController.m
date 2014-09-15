@@ -27,7 +27,9 @@
 #import "ActionSheet.h"
 #import "GestureView.h"
 
-@interface ViewController ()
+#import <MessageUI/MFMailComposeViewController.h>
+
+@interface ViewController ()<MFMailComposeViewControllerDelegate>
 {
     NSMutableArray *viewArray;
     UIView *grayBackView;
@@ -244,6 +246,55 @@
     {
         [self removeView];
     }
+}
+
+
+
+- (IBAction)mailButton:(id)sender
+{
+    
+    // メールビュー生成
+    MFMailComposeViewController *mailView = [[MFMailComposeViewController alloc] init];
+    mailView.mailComposeDelegate = self;
+    
+    // メール件名
+    [mailView setSubject:@"メールの件名をここに入力します"];
+    
+    // 添付画像
+    NSData *myData = [[NSData alloc] initWithData:UIImageJPEGRepresentation([UIImage imageNamed:@"mac.jpg"], 1)];
+    [mailView addAttachmentData:myData mimeType:@"image/jpeg" fileName:@"image"];
+    
+    // メール本文
+    [mailView setMessageBody:@"メールの本文がここに入ります" isHTML:NO];
+    
+    // メールビュー表示
+    [self presentViewController:mailView animated:YES completion:nil];
+}
+
+// アプリ内メーラーのデリゲートメソッド
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result) {
+        case MFMailComposeResultCancelled:
+            // キャンセル
+            
+            break;
+        case MFMailComposeResultSaved:
+            // 保存 (ここでアラート表示するなど何らかの処理を行う)
+            
+            break;
+        case MFMailComposeResultSent:
+            // 送信成功 (ここでアラート表示するなど何らかの処理を行う)
+            
+            break;
+        case MFMailComposeResultFailed:
+            // 送信失敗 (ここでアラート表示するなど何らかの処理を行う)
+            
+            break;
+        default:
+            break;
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -8,8 +8,13 @@
 
 #import "ActionSheet.h"
 
+
+#define VERSION_CHECK NSClassFromString(@"UIAlertController")
+
 @implementation ActionSheet
 {
+    
+    UIAlertController *actionSheetController;
     __weak IBOutlet UIButton *Button1;
     __weak IBOutlet UIButton *Button2;
     __weak IBOutlet UIButton *Button3;
@@ -18,9 +23,9 @@
 
 
 // nibファイルからの読み込み
-+ (id)LoadFromNib
++ (instancetype)LoadFromNib
 {
-    UIView *view = [[UINib nibWithNibName:@"ActionSheet" bundle:nil]instantiateWithOwner:nil options:nil][0];
+    ActionSheet *view = [[UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil]instantiateWithOwner:nil options:nil][0];
     return view;
 }
 
@@ -32,19 +37,68 @@
 
 - (IBAction)actionSheetBtn1:(id)sender
 {
-    // iPadではCancelボタンは表示されない
+    if(VERSION_CHECK) {
+        
+        // UIAlertControllerを使ってアクションシートを表示(iOS8)
+        actionSheetController = [UIAlertController alertControllerWithTitle:@"Default"
+                                                                    message:nil
+                                                             preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        [actionSheetController addAction:[UIAlertAction actionWithTitle:@"Select1"
+                                                                  style:UIAlertActionStyleDefault
+                                                                handler:^(UIAlertAction *action) {
+                                                                    
+                                                                    // 「Select1」ボタンが押された時の処理
+                                                                    self.selectLabel1.text =@"Select1";
+                                                                    
+                                                                }]];
+        
+        [actionSheetController addAction:[UIAlertAction actionWithTitle:@"Select2"
+                                                                  style:UIAlertActionStyleDefault
+                                                                handler:^(UIAlertAction *action) {
+                                                                    
+                                                                    // 「Select2」ボタンが押された時の処理
+                                                                    self.selectLabel1.text =@"Select2";
+                                                                    
+                                                                }]];
+        
+        [actionSheetController addAction:[UIAlertAction actionWithTitle:@"RedButton"
+                                                                  style:UIAlertActionStyleDestructive
+                                                                handler:^(UIAlertAction *action) {
+                                                                    
+                                                                    // 「RedButton」ボタンが押された時の処理
+                                                                    self.selectLabel1.text =@"RedButton";
+                                                                    
+                                                                }]];
+        
+        // ユニバーサルアプリかiPadアプリの場合は、
+        // UIPopoverPresentationControllerを使った以下のコードが無いと落ちてしまうので注意
+        // （このコードがあっても、iPhoneでの実行時には何も変化なし）
+        actionSheetController.modalPresentationStyle = UIModalPresentationPopover;
+        UIPopoverPresentationController *pop = actionSheetController.popoverPresentationController;
+        pop.sourceView = Button1;
+        pop.sourceRect = Button1.bounds;
+        
+        [[[UIApplication sharedApplication] keyWindow].rootViewController presentViewController:actionSheetController animated:YES completion:nil];
+        
+    } else {
     
-    UIActionSheet *actionSheet =[[UIActionSheet alloc]
-                                  initWithTitle:@"Default"
-                                  delegate:self
-                                  cancelButtonTitle:@"Cancel"
-                                  destructiveButtonTitle:@"RedButton"
-                                  otherButtonTitles:@"Select1",@"Select2", nil];
-    actionSheet.tag = 0;
-    actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
-    
-    // アクションシートを出す場所を指定する
-    [actionSheet showFromRect:Button1.frame inView:self animated:YES];
+        // iPadではCancelボタンは表示されない(ポップオーバーの外側をタップすればアクションシートを消せるため)
+        // iOS Human Interface Guidelines ↓
+        // https://developer.apple.com/jp/devcenter/ios/library/documentation/UserExperience/Conceptual/MobileHIG/Alerts/Alerts.html#//apple_ref/doc/uid/TP40006556-CH14-SW36
+        
+        UIActionSheet *actionSheet =[[UIActionSheet alloc]
+                                     initWithTitle:@"Default"
+                                     delegate:self
+                                     cancelButtonTitle:@"Cancel"
+                                     destructiveButtonTitle:@"RedButton"
+                                     otherButtonTitles:@"Select1",@"Select2", nil];
+        actionSheet.tag = 0;
+        actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
+        
+        // アクションシートを出す場所を指定する
+        [actionSheet showFromRect:Button1.frame inView:self animated:YES];
+    }
 }
 
 - (IBAction)actionSheetBtn2:(id)sender
